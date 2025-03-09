@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="search-box">
+        <input
+          type="text"
+          id="city-input"
+          placeholder="Search for my city..."
+        />
+        <button class="btn-search" onclick="getWeather()">Search</button>
+      </div>
+
+      <div class="error" id="error" style="display: none"></div>
+      <div class="loading" id="loading" style="display: none">
+        Fetching Weather data...
+      </div>
+
+      <div class="weather-info" id="weather-info" style="display: none">
+        <div class="current-weather">
+          <div class="info-city">
+            <h1 class="city-name" id="city-name">City Name</h1>
+            <p class="date" id="date">Date</p>
+            <p class="weather-description" id="weather-description">
+              Weather Description
+            </p>
+          </div>
+          <div class="info-temperature">
+            <span class="temperature" id="temperature">°C</span>
+            <img src="" alt="Weather Icon" id="weather-icon" />
+          </div>
+
+          <div class="weather-details">
+            <div class="detail-box">
+              <h3>Feels Like</h3>
+              <p id="feels-like">°C</p>
+            </div>
+            <div class="detail-box">
+              <h3>Humidity</h3>
+              <p id="humidity">%</p>
+            </div>
+            <div class="detail-box">
+              <h3>Wind Speed</h3>
+              <p id="wind-speed">km/h</p>
+            </div>
+            <div class="detail-box">
+              <h3>UV Index</h3>
+              <p id="uv-index"></p>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="section-title">Forecast</h2>
+        <div class="forecast" id="forecast"></div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
